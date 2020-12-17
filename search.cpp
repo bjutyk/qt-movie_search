@@ -7,23 +7,6 @@
 #include <QUrl>
 #include <QDesktopServices>
 
-//#include <stdio.h>
-//#include <string.h>
-
-//struct store
-//{
-//    char name[20];
-//    int bianhao;
-//    int pingfen;
-//    char gaibian[20];
-//    char diyu[20];
-//    char juqing[20];
-//    char yuyan[20];
-//    char daoyan[20];
-//    char yanyuan[20];
-//    char wangzhi[40];
-//};
-
 search::search(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::search)
