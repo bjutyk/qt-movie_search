@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>addMovie</class>
+ <widget class="QDialog" name="addMovie">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>350</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>addMovie</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <family>华光细圆_CNKI</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>添加电影</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,8">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>电影名</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_name">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>请输入电影名称</string>
+         </property>
+         <property name="clearButtonEnabled">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,8">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string> 编号</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_id">
+         <property name="placeholderText">
+          <string>请输入电影编号</string>
+         </property>
+         <property name="clearButtonEnabled">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,8,0">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string> 评分</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox_rank">
+         <property name="currentText">
+          <string>请选择</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>请选择</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>10</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>9</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>8</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>7</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>6</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>4</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,8,0">
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string> 名著</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox_ming">
+         <item>
+          <property name="text">
+           <string>请选择</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>无</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>西游记</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,8,0">
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string> 地域</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox_region">
+         <item>
+          <property name="text">
+           <string>请选择</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>中国大陆</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>欧美</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>美国</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>中国香港</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>中国台湾</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>日本</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>韩国</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>英国</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>法国</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>德国</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>意大利</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>西班牙</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>印度</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>泰国</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>俄罗斯</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>伊朗</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>加拿大</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>澳大利亚</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>爱尔兰</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>瑞典</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>巴西</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>丹麦</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,8,0">
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string> 剧情</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox_plot">
+         <item>
+          <property name="text">
+           <string>请选择</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>戏剧</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>动作</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>爱情</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>科幻</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>动画</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>悬疑</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>惊悚</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>恐怖</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>犯罪</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>同性</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>音乐</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>歌舞</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>传记</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>历史</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>战争</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>西部</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>奇幻</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>冒险</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>灾难</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>武侠</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>情色</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="1,8,0">
+       <item>
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string> 语言</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox_language">
+         <item>
+          <property name="text">
+           <string>请选择</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>中文</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>英语</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>西班牙语</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>法语</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>意大利语</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>德语</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>阿拉伯语</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>日语</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>韩语</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>泰语</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>俄语</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>葡萄牙语</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>西班牙语</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="1,8">
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string> 导演</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_director">
+         <property name="clearButtonEnabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="1,8">
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string> 演员</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_actor"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <widget class="QPushButton" name="pushButton_ok">
+         <property name="text">
+          <string>确定</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>138</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_cancel">
+         <property name="text">
+          <string>取消</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

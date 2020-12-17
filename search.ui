@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>search</class>
+ <widget class="QDialog" name="search">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>991</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,6,2">
+    <item>
+     <widget class="QComboBox" name="comboBox_method">
+      <item>
+       <property name="text">
+        <string>请选择查询方式</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>按名称查询</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>按编号查询</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>按评分查询</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>按名著查询</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>按地域查询</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>按剧情查询</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>按语言查询</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>按导演查询</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>按演员查询</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_search"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_queren">
+      <property name="text">
+       <string>确认</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>981</width>
+     <height>451</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
