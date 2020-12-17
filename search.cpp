@@ -4,7 +4,25 @@
 #include <QMessageBox>
 #include <QDebug>
 #include <QStringList>
+#include <QUrl>
+#include <QDesktopServices>
 
+//#include <stdio.h>
+//#include <string.h>
+
+//struct store
+//{
+//    char name[20];
+//    int bianhao;
+//    int pingfen;
+//    char gaibian[20];
+//    char diyu[20];
+//    char juqing[20];
+//    char yuyan[20];
+//    char daoyan[20];
+//    char yanyuan[20];
+//    char wangzhi[40];
+//};
 
 search::search(QWidget *parent) :
     QDialog(parent),
@@ -28,8 +46,18 @@ search::search(QWidget *parent) :
     this->model->setHorizontalHeaderItem(6,new QStandardItem("语言"));
     this->model->setHorizontalHeaderItem(7,new QStandardItem("导演"));
     this->model->setHorizontalHeaderItem(8,new QStandardItem("演员"));
-
+    this->model->setHorizontalHeaderItem(9,new QStandardItem("预告片"));
     this->ui->tableView->setModel(model);
+    this->ui->tableView->setColumnWidth(0,100);
+    this->ui->tableView->setColumnWidth(1,100);
+    this->ui->tableView->setColumnWidth(2,50);
+    this->ui->tableView->setColumnWidth(3,100);
+    this->ui->tableView->setColumnWidth(4,100);
+    this->ui->tableView->setColumnWidth(5,100);
+    this->ui->tableView->setColumnWidth(6,100);
+    this->ui->tableView->setColumnWidth(7,100);
+    this->ui->tableView->setColumnWidth(8,100);
+    this->ui->tableView->setColumnWidth(9,150);
 
 }
 
@@ -37,7 +65,7 @@ search::~search()
 {
     delete ui;
 }
-
+//从movie.txt文件夹种读取电影信息
 int search::readFromFile()
 {
     QFile file("movie.txt");
@@ -64,10 +92,39 @@ int search::readFromFile()
 //int index;
 void search::on_pushButton_queren_clicked()
 {
+    this->model->clear();
+    this->model->setHorizontalHeaderItem(0,new QStandardItem("电影名"));
+    this->model->setHorizontalHeaderItem(1,new QStandardItem("编号"));
+    this->model->setHorizontalHeaderItem(2,new QStandardItem("评分"));
+    this->model->setHorizontalHeaderItem(3,new QStandardItem("名著改编"));
+    this->model->setHorizontalHeaderItem(4,new QStandardItem("地域"));
+    this->model->setHorizontalHeaderItem(5,new QStandardItem("剧情"));
+    this->model->setHorizontalHeaderItem(6,new QStandardItem("语言"));
+    this->model->setHorizontalHeaderItem(7,new QStandardItem("导演"));
+    this->model->setHorizontalHeaderItem(8,new QStandardItem("演员"));
+    this->model->setHorizontalHeaderItem(9,new QStandardItem("预告片"));
+    this->ui->tableView->setModel(model);
+    this->ui->tableView->setColumnWidth(0,100);
+    this->ui->tableView->setColumnWidth(1,100);
+    this->ui->tableView->setColumnWidth(2,50);
+    this->ui->tableView->setColumnWidth(3,100);
+    this->ui->tableView->setColumnWidth(4,100);
+    this->ui->tableView->setColumnWidth(5,100);
+    this->ui->tableView->setColumnWidth(6,100);
+    this->ui->tableView->setColumnWidth(7,100);
+    this->ui->tableView->setColumnWidth(8,100);
+    this->ui->tableView->setColumnWidth(9,150);
     int index = this->ui->comboBox_method->currentIndex();
     QString cnt = this->ui->lineEdit_search->text();
     doQuert(index,cnt);
 }
+//排序按钮
+//void search::on_pushButton_sorting_clicked()
+//{
+//    int index2 = this->ui->comboBox_sorting->currentIndex();
+//    doSorting(index2);
+//}
+
 //遍历文本信息
 void search::doQuert(int index,QString cnt)
 {
@@ -132,11 +189,46 @@ void search::doQuert(int index,QString cnt)
     }
 
 }
+//bool compareBarData(const store &barAmount1, const store &barAmount2)
+//{
+//    if (barAmount1.pingfen < barAmount2.pingfen)
+//    {
+//        return true;
+//    }
+//　　return false;
+//}
+//void search::doSorting(int index2)
+//{
+//    if(index2 == 1){
+//        struct store sto[1000];
+//        struct store temp;
+//        //int count = 0;
+//        for(int i = 0;i < mov_lines.length();i++){
+//            QString line = mov_lines.at(i);
+//            line = line.trimmed();  //去掉前后空格
+//            QStringList subs = line.split(" ");
 
+//    }
+//    }
+//}
+//展示电影文本信息
 void search::display(int row, QStringList subs)
 {
     int i = 0;
-    for(int i = 0;i < subs.length();i++){
+    for(i = 0;i < subs.length();i++){
         this->model->setItem(row,i,new QStandardItem(subs.at(i)));//???三个参数
     }
+}
+
+void search::on_tableView_doubleClicked(const QModelIndex &index)
+{
+    QVariant url=index.data();
+    QString urlString=url.toString();
+    if(urlString.contains("http"))
+    {
+        const QUrl
+        regUrl(urlString);
+        QDesktopServices::openUrl(regUrl);
+    }
+
 }
